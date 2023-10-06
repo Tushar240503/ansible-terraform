@@ -96,5 +96,11 @@ provider "aws" {
       tags={
         name: "server"
       }
+      provisioner "local-exec" {
+        working_dir = "/Users/tusharsharma/desktop/ansible/docker"
+         
+        command=  "ansible-playbook  --inventory ${self.public_ip}, --private_key ${var.ssh_key} --user ec2-user    play.yaml  "
+      }
+
 
      }

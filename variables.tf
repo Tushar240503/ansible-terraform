@@ -17,3 +17,6 @@
   variable "env_prefix" {
 
   }
+  variable "ssh_key" {
+   
+  }
